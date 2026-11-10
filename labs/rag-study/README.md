@@ -12,6 +12,19 @@
 | `step6_eval.py` | 4권 1~3, 5장 | 없음 | 정답 세트 평가, 단계별 지연, 재정렬 후보 수, 답 없는 질문, 숫자 근거 검사 |
 | `step7_ontology.py` | 5권 | 없음 | 조직도 문장으로 온톨로지·지식 그래프 만들기, 제약 검사, 여러 단계 질문, 벡터와 비교, GraphRAG |
 
+## 실무편 실습 (`practice/`)
+가이드북 「AX 실무편」(`/ax-practice/`)의 실습이다. 실수를 재현하고 고친 방식과 숫자로 비교한다. 이 폴더(`labs/rag-study`)에서 `uv run practice/p1_data.py`처럼 돌린다.
+
+| 파일 | 실무편 | LLM | 하는 일 |
+|---|---|---|---|
+| `practice/p1_data.py` | 1권 | 없음 | 머리말, 표, 옛 버전, 입력 한도, 중복 |
+| `practice/p2_search.py` | 2권 | C만 | 모델 불일치, 정규화, 이어지는 질문, 사후 필터, 한국어 토큰 |
+| `practice/p3_generation.py` | 3권 | 있음 | 넣는 조각 수, 출처, '없음' 처리, 숨은 지시와 가짜 사실, 조건 누락 |
+| `practice/p4_eval_ops.py` | 4권 | 없음 | 몇 개로 판단, 평균만 보기, 평가 누수, 옛 조각, 재 보지 않은 최적화 |
+| `practice/p5_system.py` | 5권 | 없음 | 프롬프트로만 막기, 로그 속 비밀값, 느린 정규식, 출력 검증, 턴 제한 |
+
+LLM은 이 맥의 `claude -p`(`practice/llm.py`, 모델 haiku)로만 부른다. API 키 방식은 없다. `CI`나 `GITHUB_ACTIONS` 환경이면 부르지 않고 멈춘다. 결과는 `practice/.cache`에 남아(git에는 올리지 않음) 두 번째부터는 부르지 않는다.
+
 ## 데이터
 - `data/docs.json`: 짧은 가짜 규정 8개 (1~2단계)
 - `data/handbook.md`: 긴 가짜 직원 안내서, `## 제목`으로 절이 나뉜다 (3단계부터)
