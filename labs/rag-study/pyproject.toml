@@ -1,0 +1,14 @@
+[project]
+name = "rag-study"
+version = "0.1.0"
+description = "AX 개발자 첫걸음 가이드북 실습"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.6.0",
+    "chromadb>=1.5.9",
+    "faiss-cpu>=1.15.1",
+    "fastembed>=0.9.1",
+    "networkx>=3.7",
+    "numpy>=2.5.4",
+    "rank-bm25>=0.2.2",
+]

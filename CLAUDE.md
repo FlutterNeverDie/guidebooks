@@ -12,6 +12,7 @@
 | `books/<id>/book.json` | 제목(`title`), 목록 소개(`blurb`), 목록 순서(`order`), 권마다 최소 장 수. 옛 엔진 책은 `legacy`에 자체 빌드 스크립트(첫 인자 = 출력 파일) |
 | `books/<id>/book_cover.js` | 표지와 머리글·꼬리말·비유 상자 이름·에필로그 문구(`text`), 진도 저장 키(`storageKey`) |
 | `books/<id>/volumes/volN/` | `meta.js`(권 표지), `chap1.js`~(장 하나 = 파일 하나), `recap.js`(정리) |
+| `labs/rag-study/` | AX 책 실습 코드(uv 프로젝트). 책 본문은 `rag-study/...`로 가리키고 하네스가 파일이 있는지 본다. `.venv`는 git에 올리지 않는다 |
 | `dist/` | 결과물. 직접 고치지 않고 git에도 올리지 않는다 |
 | `.github/workflows/pages.yml` | main에 푸시하면 전부 빌드해 GitHub Pages에 올린다. 공개 사이트다 |
 

@@ -1,0 +1,34 @@
+{
+  "note": "handbook.md 검색 평가용 정답 세트. key = 답이 든 조각에 반드시 있어야 하는 문구. kind: paraphrase(문서 단어를 피해 바꿔 말함), keyword(문서 단어를 그대로 씀)",
+  "answerable": [
+    {"q": "해외 가면 밥값은 따로 줘?", "key": "일비 50달러", "kind": "paraphrase"},
+    {"q": "비행기 오래 타면 좋은 자리 앉아도 돼?", "key": "프리미엄 이코노미", "kind": "paraphrase"},
+    {"q": "올해 남은 휴가 내년에 써도 돼?", "key": "최대 5일", "kind": "paraphrase"},
+    {"q": "할머니 돌아가시면 며칠 쉬어?", "key": "조부모 사망은 3일", "kind": "paraphrase"},
+    {"q": "노트북 잃어버렸는데 새 거 받으려면 뭐 필요해?", "key": "분실 신고 접수증", "kind": "paraphrase"},
+    {"q": "손님 차는 어디 대?", "key": "손님 전용", "kind": "paraphrase"},
+    {"q": "집에서 일하는 거 며칠 돼?", "key": "주 2회", "kind": "paraphrase"},
+    {"q": "책 사는 돈 회사가 내줘?", "key": "100만 원", "kind": "paraphrase"},
+    {"q": "술 마신 거 경비 처리 얼마까지?", "key": "1인 3만 원", "kind": "paraphrase"},
+    {"q": "개인 카드로 산 거 언제 돌려받아?", "key": "급여일", "kind": "paraphrase"},
+    {"q": "해외에서 호텔 하룻밤 얼마까지 돼?", "key": "해외 1박 200달러", "kind": "paraphrase"},
+    {"q": "출근하고 언제 집에 가도 돼?", "key": "9시간 뒤에 퇴근", "kind": "paraphrase"},
+    {"q": "밥값 많이 나오면 뭘 더 적어야 해?", "key": "함께 먹은 사람", "kind": "paraphrase"},
+    {"q": "결혼하면 며칠 쉬어?", "key": "본인 결혼은 5일", "kind": "paraphrase"},
+    {"q": "회의실 예약해 놓고 안 가면 어떻게 돼?", "key": "자동으로 풀린다", "kind": "paraphrase"},
+    {"q": "컨퍼런스 다녀오면 뭐 해야 해?", "key": "팀에 발표한다", "kind": "paraphrase"},
+    {"q": "USB 꽂아도 돼?", "key": "USB", "kind": "keyword"},
+    {"q": "KTX 특실 타도 돼?", "key": "KTX 일반실", "kind": "keyword"},
+    {"q": "VPN 비밀번호 주기는?", "key": "90일", "kind": "keyword"},
+    {"q": "반반차 쓸 수 있어?", "key": "반반차는 없다", "kind": "keyword"},
+    {"q": "핵심 근무 시간이 언제야?", "key": "오전 10시부터 오후 4시", "kind": "keyword"},
+    {"q": "택배 몇 건까지 받을 수 있어?", "key": "다섯 건", "kind": "keyword"}
+  ],
+  "unanswerable": [
+    "육아휴직은 몇 개월까지 돼?",
+    "사내 헬스장 몇 시에 열어?",
+    "스톡옵션은 언제 받아?",
+    "명절 선물은 뭐 줘?",
+    "야근 식대는 얼마야?"
+  ]
+}

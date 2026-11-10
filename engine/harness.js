@@ -17,7 +17,7 @@ if (!BOOK_ID) { console.error('사용법: node engine/harness.js <책 id>'); pro
 const BOOK = path.join(ROOT, 'books', BOOK_ID);
 const CONF = JSON.parse(fs.readFileSync(path.join(BOOK, 'book.json'), 'utf8'));
 const VOLUMES_DIR = path.join(BOOK, 'volumes');
-const RAG_STUDY = path.resolve(ROOT, '..', 'rag-study');
+const RAG_STUDY = path.join(ROOT, 'labs', 'rag-study');
 
 let errorCount = 0;
 function logPass(msg) { console.log(`\x1b[32m✓\x1b[0m ${msg}`); }
@@ -125,9 +125,8 @@ volDirs.forEach(vDir => {
       logFail(`${vDir}/chap${chapIdx}.js 파싱 오류: ${e.message}`);
     }
 
-    // 규칙 검사 2: 본문이 가리키는 실습 파일(rag-study/...)이 실제로 있어야 한다
-    // rag-study는 이 저장소 밖(형제 폴더)에 있어서, 없을 때(GitHub Actions)는 건너뛴다
-    if (fs.existsSync(RAG_STUDY)) for (const m of cContent.matchAll(/rag-study\/([\w./-]+\.(?:py|md|json))/g)) {
+    // 규칙 검사 2: 본문이 가리키는 실습 파일(rag-study/...)이 labs/rag-study에 실제로 있어야 한다
+    for (const m of cContent.matchAll(/rag-study\/([\w./-]+\.(?:py|md|json))/g)) {
       if (!fs.existsSync(path.join(RAG_STUDY, m[1]))) {
         logFail(`${vDir}/chap${chapIdx}.js: 없는 실습 파일 rag-study/${m[1]}`);
       }
