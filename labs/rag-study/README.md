@@ -25,7 +25,10 @@
 
 LLM은 이 맥의 `claude -p`(`practice/llm.py`, 모델 haiku)로만 부른다. API 키 방식은 없다. `CI`나 `GITHUB_ACTIONS` 환경이면 부르지 않고 멈춘다. 결과는 `practice/.cache`에 남아(git에는 올리지 않음) 두 번째부터는 부르지 않는다.
 
-## 데이터
+## 중급·심화편 실습 (`course/`)
+중급편(`/ax-2/`)과 심화편(`/ax-3/`) 실습은 [course/README.md](course/README.md)에 있어요. 각각 5권 x 5장이고, 파일별 A~E가 장에 대응해요. `python3 course/run_all.py`로 표준 라이브러리만 사용하는 50개 항목을 검사해요. 합성 입력·설계 모형의 결과와 실제 모델·서비스 성능은 구분해요. `pipeline.py`의 공통 요청 경로와 실제 로컬 검색·재정렬·HyDE·인코더 학습·pgvector 실행 기록을 함께 제공해요. 실행 조건과 한계는 course README와 reports에 있어요. 실제 생성은 기존 로컬 Claude 래퍼만 사용해요.
+
+## 데이터 파일
 - `data/docs.json`: 짧은 가짜 규정 8개 (1~2단계)
 - `data/handbook.md`: 긴 가짜 직원 안내서, `## 제목`으로 절이 나뉜다 (3단계부터)
 - `data/eval.json`: handbook.md 검색 정답 세트. 답 있는 질문 22개, 답 없는 질문 5개 (6단계)

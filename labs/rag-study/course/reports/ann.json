@@ -1,0 +1,115 @@
+{
+  "scope": "고정 seed 합성 5000x64, 질문20, HNSW M16 efSearch64, warm 반복 없음. 시간은 이 실행만의 값.",
+  "seed": 42,
+  "versions": {
+    "faiss-cpu": "1.15.1",
+    "numpy": "2.5.4",
+    "fastembed": "0.9.1"
+  },
+  "filtered_ann": [
+    {
+      "selectivity": 1.0,
+      "candidates": 3,
+      "mean_returned": 3.0,
+      "recall3": 1.0,
+      "batch_ms": 0.865
+    },
+    {
+      "selectivity": 1.0,
+      "candidates": 30,
+      "mean_returned": 3.0,
+      "recall3": 1.0,
+      "batch_ms": 0.496
+    },
+    {
+      "selectivity": 1.0,
+      "candidates": 300,
+      "mean_returned": 3.0,
+      "recall3": 1.0,
+      "batch_ms": 1.691
+    },
+    {
+      "selectivity": 0.1,
+      "candidates": 3,
+      "mean_returned": 0.5,
+      "recall3": 0.1667,
+      "batch_ms": 0.394
+    },
+    {
+      "selectivity": 0.1,
+      "candidates": 30,
+      "mean_returned": 2.55,
+      "recall3": 0.7833,
+      "batch_ms": 0.442
+    },
+    {
+      "selectivity": 0.1,
+      "candidates": 300,
+      "mean_returned": 3.0,
+      "recall3": 0.8667,
+      "batch_ms": 1.518
+    },
+    {
+      "selectivity": 0.01,
+      "candidates": 3,
+      "mean_returned": 0.05,
+      "recall3": 0.0167,
+      "batch_ms": 0.393
+    },
+    {
+      "selectivity": 0.01,
+      "candidates": 30,
+      "mean_returned": 0.6,
+      "recall3": 0.2,
+      "batch_ms": 0.447
+    },
+    {
+      "selectivity": 0.01,
+      "candidates": 300,
+      "mean_returned": 2.5,
+      "recall3": 0.6833,
+      "batch_ms": 1.5
+    }
+  ],
+  "handbook": {
+    "documents": 23,
+    "questions": 22,
+    "exact_hit1": 13,
+    "ann_hit1": 13,
+    "ann_recall3_against_exact": 1.0
+  },
+  "hard_negative_candidates": [
+    {
+      "query": "해외 가면 밥값은 따로 줘?",
+      "positive_id": "h3-4",
+      "positive": "3. 출장 > 해외에서는 하루 일비 50달러를 따로 받는다. 일비는 식비와 현지 교통비를 포함하며 영수증 없이 출장 일수만큼 지급된다.",
+      "negative_id": "h4-2",
+      "negative": "4. 경비 처리 > 식대가 1회 5만 원을 넘으면 함께 먹은 사람 이름을 모두 적는다. 거래처와 먹은 경우에는 거래처 이름과 목적도 적는다. 술값은 1인 3만 원까지만 인정한다.",
+      "exclusion": "동일 부모·동일 본문 제외. 남은 후보도 사람이 오답인지 검토해야 해요."
+    },
+    {
+      "query": "비행기 오래 타면 좋은 자리 앉아도 돼?",
+      "positive_id": "h3-2",
+      "positive": "3. 출장 > 교통편은 KTX 일반실과 이코노미석이 기준이다. 비행 시간이 8시간을 넘으면 프리미엄 이코노미까지 허용한다. 렌터카는 대중교통으로 갈 수 없는 곳일 때만 쓴다.",
+      "negative_id": "h6-1",
+      "negative": "6. 사무실 > 회의실은 캘린더에서 2주 앞까지 예약할 수 있다. 예약 시각 10분이 지나도 아무도 들어오지 않으면 예약이 자동으로 풀린다.",
+      "exclusion": "동일 부모·동일 본문 제외. 남은 후보도 사람이 오답인지 검토해야 해요."
+    },
+    {
+      "query": "올해 남은 휴가 내년에 써도 돼?",
+      "positive_id": "h2-3",
+      "positive": "2. 연차와 휴가 > 쓰지 못한 연차는 다음 해 3월 31일까지 최대 5일을 넘겨 쓸 수 있다. 3월 31일이 지나면 남은 날은 사라지고 돈으로 바꿔 주지 않는다.",
+      "negative_id": "h4-3",
+      "negative": "4. 경비 처리 > 개인 카드로 먼저 낸 비용은 다음 달 5일까지 청구하면 그달 급여일에 함께 들어온다. 청구가 늦으면 그다음 달로 밀린다.",
+      "exclusion": "동일 부모·동일 본문 제외. 남은 후보도 사람이 오답인지 검토해야 해요."
+    },
+    {
+      "query": "할머니 돌아가시면 며칠 쉬어?",
+      "positive_id": "h2-4",
+      "positive": "2. 연차와 휴가 > 경조 휴가는 연차와 따로 준다. 본인 결혼은 5일, 자녀 결혼은 1일, 부모와 배우자 사망은 5일, 조부모 사망은 3일이다. 증빙 서류는 휴가를 다녀온 뒤 2주 안에 인사팀에 낸다.",
+      "negative_id": "h3-3",
+      "negative": "3. 출장 > 숙박비는 국내 1박 10만 원, 해외 1박 200달러까지 실비로 정산한다. 한도를 넘는 금액은 본인이 낸다. 호텔은 회사 제휴 사이트에서 예약하면 결제까지 회사가 처리한다.",
+      "exclusion": "동일 부모·동일 본문 제외. 남은 후보도 사람이 오답인지 검토해야 해요."
+    }
+  ]
+}

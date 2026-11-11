@@ -1,0 +1,105 @@
+{
+  "scope": "교육용 소표본. 고정 12 step 단일 실행, test로 checkpoint를 고르지 않음.",
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "steps": 12,
+  "seed": 42,
+  "learning_rate": 2e-05,
+  "device": "cpu",
+  "seconds": 16.57,
+  "versions": {
+    "sentence-transformers": "5.7.0",
+    "torch": "2.15.0",
+    "transformers": "5.22.2"
+  },
+  "manifest": {
+    "train_groups": [
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5"
+    ],
+    "validation_groups": [
+      "h6",
+      "h7"
+    ],
+    "test_groups": [
+      "test-locker",
+      "test-shuttle",
+      "test-library",
+      "test-bicycle",
+      "test-print",
+      "test-lunch"
+    ],
+    "train_pairs": 17,
+    "validation_pairs": 5,
+    "test_sha256": "e7f976efdad50115b5d5bc5f7594304a2ae6452d389d0aaf04ad4ed072b8acbb"
+  },
+  "batch_losses": [
+    0.168077,
+    0.468612,
+    0.001393,
+    0.481358,
+    0.011774,
+    0.085543,
+    0.009777,
+    0.006968,
+    0.033246,
+    0.00241,
+    0.027057,
+    0.008804
+  ],
+  "max_embedding_parameter_change": 0.00021144933998584747,
+  "validation_before": {
+    "ranks": [
+      3,
+      1,
+      1,
+      2,
+      1
+    ],
+    "hit1": 3,
+    "count": 5,
+    "mrr": 0.7667
+  },
+  "validation_after": {
+    "ranks": [
+      2,
+      1,
+      1,
+      2,
+      1
+    ],
+    "hit1": 3,
+    "count": 5,
+    "mrr": 0.8
+  },
+  "test_before": {
+    "ranks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "hit1": 6,
+    "count": 6,
+    "mrr": 1.0
+  },
+  "test_after": {
+    "ranks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "hit1": 6,
+    "count": 6,
+    "mrr": 1.0
+  },
+  "reembedded_documents": true,
+  "saved_model": "course/.cache/trained-encoder"
+}
